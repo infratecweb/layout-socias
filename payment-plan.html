@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- SEO Meta Tags -->
+    <title>As Sócias</title>
+    <meta name="description" content="Descrição breve e atraente da página, incluindo a palavra-chave principal.">
+    <meta name="keywords" content="palavra-chave1, palavra-chave2, palavra-chave3">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags (para redes sociais) -->
+    <meta property="og:title" content="Título da Página - Palavra-chave Principal">
+    <meta property="og:description" content="Descrição breve e atraente da página para redes sociais.">
+    <meta property="og:image" content="URL_da_imagem_de_destaque.jpg">
+    <meta property="og:url" content="https://www.seusite.com/pagina">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Título da Página - Palavra-chave Principal">
+    <meta name="twitter:description" content="Descrição breve e atraente da página para Twitter.">
+    <meta name="twitter:image" content="URL_da_imagem_de_destaque.jpg">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/import.css">
+
+    <!-- Schema.org Markup para SEO -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Título da Página - Palavra-chave Principal",
+            "description": "Descrição breve da página.",
+            "url": "https://www.seusite.com/pagina",
+            "image": "https://www.seusite.com/caminho_para_imagem.jpg"
+        }
+    </script>
+</head>
+<body>
+
+    <!-- MODAL - ACCESS INFORMATION -->
+    <div class="modal-access-info hidden" id="modal-access-info">
+        <div class="mask"></div>
+
+        <section>
+            <nav>
+                <img src="./assets/images/logo-as-socias.png" alt="Logo As Sócias">
+
+                <button class="bt close" onclick="closeModal('modal-access-info')">X</button>
+            </nav>
+            <header>
+                <h1>ACCESS BEYOND THIS PAGE IS RESTRICTED TO ADULTS (18+)* ONLY</h1>
+                <p>The following Website, including all webpages, links, images and videos, displays sexually oriented, including explicit, material of a pornographic nature. Only consenting adults who (1) are at least eighteen (18) years of age, or the age of majority in the jurisdiction they are accessing the Website from, and (2) agree to the terms indicated below, are authorized to enter the Website and view the contents therein. By clicking ENTER, you affirm that you are at least eighteen (18) years of age, or the age of majority in the jurisdiction you are accessing the Website from AND agree to the terms indicated at the bottom of the page.</p>
+            </header>
+            <footer>
+                <button class="bt hollow" onclick="closeModal('modal-access-info')">Exit</button>
+                <button class="bt">Enter</button>
+            </footer>
+        </section>
+    </div>
+
+    <!-- MODAL - ACCESS -->
+    <div class="modal-access hidden" id="modal-access">
+        <div class="mask"></div>
+
+        <section>
+            <nav>
+                <img src="./assets/images/logo-as-socias.png" alt="Logo As Sócias">
+
+                <button class="bt close" onclick="closeModal('modal-access')">X</button>
+            </nav>
+            
+            <form class="frm">
+                <div>
+                    <span class="ic">
+                        <img src="./assets/images/icons/ic-email.svg" alt="Icone de e-mail">
+                    </span>
+                    <input type="email" name="email" id="email" placeholder="Digite o seu e-mail">
+                </div>
+
+                <div>
+                    <span class="ic">
+                        <img src="./assets/images/icons/ic-senha.svg" alt="Icone de senha">
+                    </span>
+                    <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                    <span class="ic" onclick="viewPassword('password')">
+                        <img src="./assets/images/icons/ic-olho.svg" alt="Icone de olho">
+                    </span>
+                </div>
+
+                <div class="others-action">
+                    <div>
+                        <input type="checkbox" name="check" id="check">
+                        Lembrar-me
+                    </div>
+
+                    <div>
+                        <a href="#">Esqueceu sua senha?</a>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button class="bt hollow" onclick="goPage('choose-plan')">Cadastre-se</button>
+                    <button class="bt">Entrar</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <!-- TEMPLATE -->
+    <div class="template-grid">
+        <!-- HEADER -->
+        <header>
+            <div class="logo">
+                <a href="/" title="Logo As Sócias">
+                    <img src="./assets/images/logo-as-socias.png" alt="Logo As Sócias">
+                </a>
+            </div>
+            
+            <nav class="group-buttons">
+                <button class="bt hollow" onclick="showModal('modal-access')">Member Area</button>
+                <button class="bt" onclick="showModal('modal-access-info')">Join Now</button>  
+            </nav>
+        </header>
+
+        <main>
+            <!-- SPACE -->
+            <div class="space"></div>
+
+            <div class="content-grid-center">
+                <section class="box">
+                    <header>
+                        <h1>Select Plan</h1>
+                    </header>
+
+                    <div class="content-plan">
+                        <p>3 DAY TRIAL</p>
+                        <p>Limited Acess</p>
+                        <p>R$ 199,00</p>
+                        <button class="bt" onclick="goPage('choose-plan')">Alterar Plano</button>
+                    </div>
+                </section>
+
+                <div class="grid-col-2">
+                    <section class="box">
+                        <header>
+                            <h1>Register</h1>
+                        </header>
+
+                        <form class="frm-register">
+                            <div>
+                                <span class="ic">
+                                    <img src="./assets/images/icons/ic-email.svg" alt="Icone de e-mail">
+                                </span>
+                                <input type="email" name="email" id="email" placeholder="Digite o seu e-mail">
+                            </div>
+
+                            <div>
+                                <span class="ic">
+                                    <img src="./assets/images/icons/ic-senha.svg" alt="Icone de senha">
+                                </span>
+                                <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                                <span class="ic" onclick="viewPassword('password')">
+                                    <img src="./assets/images/icons/ic-olho.svg" alt="Icone de olho">
+                                </span>
+                            </div>
+
+                            <div>
+                                <span class="ic">
+                                    <img src="./assets/images/icons/ic-senha.svg" alt="Icone de senha">
+                                </span>
+                                <input type="password" name="password" id="re-password" placeholder="Confirme sua senha">
+                                <span class="ic" onclick="viewPassword('re-password')">
+                                    <img src="./assets/images/icons/ic-olho.svg" alt="Icone de olho">
+                                </span>
+                            </div>
+                        </form>
+                    </section>
+
+                    <section class="box">
+                        <header>
+                            <h1>Payment</h1>
+                        </header>
+
+                        <form class="frm-payment">
+                            
+                            <div>
+                                <span class="ic">
+                                    <img src="./assets/images/icons/ic-cartao.svg" alt="Icone de cartão de crédito">
+                                </span>
+                                <input type="text" name="text" id="credit-card-number" placeholder="Cartão de crédito">
+                            </div>
+
+                            <div>
+                                <span class="ic">
+                                    <img src="./assets/images/icons/ic-paypal.svg" alt="Icone de Paypal">
+                                </span>
+                                <input type="text" name="text" id="paypal" placeholder="Paypal">
+                            </div>
+
+                            <div>
+                                <span class="ic">
+                                    <img src="./assets/images/icons/ic-dinheiro.svg" alt="Icone de dinheiro">
+                                </span>
+                                <input type="text" name="text" id="other" placeholder="Outras formas de pagamento">
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <!-- GAL IMAGES -->
+            <section class="gallery gal-images">
+                <ul class="gallery-content owl-carousel">
+                    <li>
+                        <section>
+                            <a href="#" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <a href="#" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <a href="#" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <a href="#" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <a href="#" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <a href="#" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <a href="#" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <a href="#" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <a href="#" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <a href="#" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="content-grid-center">
+                <!-- DETAILS OPTION PLAN -->
+                <section class="details-option-plan">
+                    <ul>
+                        <li class="check">Limited Streaming</li>
+                        <li>No Downloads</li>
+                        <li>No Downloads</li>
+                        <li>No Downloads</li>
+                    </ul>
+                </section>
+
+                <!-- SPACE -->
+                <div class="space"></div>
+                
+                <section class="testimonials">
+                    <header>
+                        <h1>Quem usa recomenda</h1>
+                    </header>
+
+                    <ul>
+                        <li>
+                            <section>
+                                <header>
+                                    <h1>Exclusive and high quality content</h1>
+                                </header>
+
+                                <p>"I've been a member of The Adult Content Associates for several months now, and I couldn't be happier with my experience. The quality of the content is top-notch, and the variety is impressive. There is always something new and exciting to explore.</p>
+
+                                <footer>
+                                    <p>Michel Colins</p>
+                                </footer>
+                            </section>
+                        </li>
+
+                        <li>
+                            <section>
+                                <header>
+                                    <h1>Exclusive and high quality content</h1>
+                                </header>
+
+                                <p>"I've been a member of The Adult Content Associates for several months now, and I couldn't be happier with my experience. The quality of the content is top-notch, and the variety is impressive. There is always something new and exciting to explore.</p>
+
+                                <footer>
+                                    <p>Michel Colins</p>
+                                </footer>
+                            </section>
+                        </li>
+
+                        <li>
+                            <section>
+                                <header>
+                                    <h1>Exclusive and high quality content</h1>
+                                </header>
+
+                                <p>"I've been a member of The Adult Content Associates for several months now, and I couldn't be happier with my experience. The quality of the content is top-notch, and the variety is impressive. There is always something new and exciting to explore.</p>
+
+                                <footer>
+                                    <p>Michel Colins</p>
+                                </footer>
+                            </section>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- SPACE -->
+            <div class="space"></div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="_complementary">
+                <div class="logo">
+                    <a href="#" title="Logo As Sócias">
+                        <img src="./assets/images/logo-as-socias.png" alt="Logo As Sócias">
+                    </a>
+                </div>
+
+                <div class="go-top">
+                    <button id="go-top" title="Voltar ao topo" onclick="goTop()">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="16" fill="#F9006C"/>
+                            <path d="M22 19L16 13L10 19" stroke="#FFF0FB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                        <p>Voltar ao topo </p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="_copy">
+                <div class="copy">
+                    <p>© 2003 - <span id="_current-date"></span> - All rights reserved.</p>
+                </div>
+
+                <div class="social-group">
+                    <p>acompanhe nas redes sociais</p>
+                    <ul>
+                        <li>
+                            <a href="#" title="Instagram As Sócias" target="_blank">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.496 3H16.505C18.987 3 21 5.012 21 7.496V16.505C21 18.987 18.988 21 16.504 21H7.496C5.013 21 3 18.988 3 16.504V7.496C3 5.013 5.012 3 7.496 3V3Z" stroke="#949DA6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16.949 6.71304C16.763 6.71404 16.612 6.86504 16.612 7.05104C16.612 7.23704 16.764 7.38804 16.95 7.38804C17.136 7.38804 17.287 7.23704 17.287 7.05104C17.288 6.86404 17.136 6.71304 16.949 6.71304" stroke="#949DA6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.5455 9.45432C15.9514 10.8602 15.9514 13.1396 14.5455 14.5455C13.1396 15.9514 10.8602 15.9514 9.45432 14.5455C8.04843 13.1396 8.04843 10.8602 9.45432 9.45432C10.8602 8.04843 13.1396 8.04843 14.5455 9.45432" stroke="#949DA6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>  
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" title="Youtube As Sócias" target="_blank">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.583 6.37312C21.354 5.36912 20.676 4.57712 19.814 4.30512C18.255 3.81812 12 3.81812 12 3.81812C12 3.81812 5.748 3.81812 4.186 4.30512C3.327 4.57312 2.649 5.36512 2.417 6.37312C2 8.19512 2 12.0001 2 12.0001C2 12.0001 2 15.8051 2.417 17.6271C2.646 18.6311 3.324 19.4231 4.186 19.6951C5.748 20.1821 12 20.1821 12 20.1821C12 20.1821 18.255 20.1821 19.814 19.6951C20.673 19.4271 21.351 18.6351 21.583 17.6271C22 15.8051 22 12.0001 22 12.0001C22 12.0001 22 8.19512 21.583 6.37312Z" stroke="#949DA6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.002 15L15.198 12L10.002 9V15Z" stroke="#949DA6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" title="Rede social As Sócias" target="_blank">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.002 15L15.198 12L10.002 9V15Z" stroke="#949DA6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 3H16.504C18.987 3 21 5.013 21 7.496V16.505C21 18.987 18.987 21 16.504 21H7.496C5.013 21 3 18.987 3 16.504V7.5C3 5.015 5.015 3 7.5 3V3Z" stroke="#949DA6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

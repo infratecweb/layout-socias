@@ -1,0 +1,11 @@
+:root {
+    /* COLORS */
+    --color-primary: hsla(334, 100%, 49%, 1);
+    --color-grey-clear: hsla(212, 10%, 74%, 1);
+    --color-grey-clear-2: hsla(0, 0%, 96%, 1);
+    --color-grey-dark: hsla(0, 0%, 15%, 1);
+    --color-grey-dark-2: hsla(200, 12%, 5%, 1);
+    --color-black: hsla(210, 40%, 2%, 1);
+    --color-yellow: hsla(47, 100%, 69%, 1);
+    --color-border: hsla(210, 11%, 7%, 1);
+}

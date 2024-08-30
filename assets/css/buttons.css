@@ -1,0 +1,68 @@
+/* BUTTON */
+.bt {
+    background-color: var(--bt-background-color, var(--color-primary));
+    border: 1px solid var(--bt-border-color, var(--color-primary));
+    border-radius: var(--bt-border-radius, .5rem);
+    color: var(--bt-color, hsla(0, 0%, 100%, 1));
+    cursor: var(--bt-cursor, pointer);
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1rem;
+    opacity: var(--bt-opacity, 1);
+    padding: var(--bt-padding, 1rem);
+    pointer-events: var(--bt-pointer-events, all);
+    position: relative;
+    text-decoration: none;
+}
+
+.bt:hover {
+    --bt-opacity: .8;
+}
+
+.bt.hollow {
+    --bt-background-color: transparent;
+    --bt-border-color: hsla(0, 0%, 100%, 1);
+}
+
+.bt.grey {
+    --bt-background-color: var(--color-grey-dark);
+    --bt-border-color: var(--color-grey-dark);
+}
+
+.bt.inactive {
+    --bt-background-color: var(--color-grey-clear);
+    --bt-border-color: var(--color-grey-clear);
+    --bt-cursor: not-allowed;
+    --bt-opacity: .4;
+    --bt-pointer-events: none;
+}
+
+.bt.close {
+    --bt-background-color: transparent;
+    --bt-color: var(--color-grey-clear);
+    border: none;
+}
+
+.bt.icon {
+    --bt-background-color: transparent;
+    --bt-border-color: hsla(0, 0%, 100%, 1);
+    --bt-border-radius: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    max-height: 48px;
+    max-width: 48px;
+    padding: .1rem;
+    width: 100vw;
+}
+
+.bt.icon svg {
+    width: 20px;
+}
+
+@media screen and (max-width: 932px) {
+    .bt {
+        --bt-padding: .7rem 1rem;
+    }
+}
