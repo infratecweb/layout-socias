@@ -78,7 +78,8 @@
                 <button class="bt close" onclick="closeModal('modal-access')">X</button>
             </nav>
             
-            <form class="frm">
+            <!-- FORMULARIO DE LOGIN -->
+            <form class="frm" id="frm-login">
                 <div>
                     <span class="ic">
                         <img src="./assets/images/icons/ic-email.svg" alt="Icone de e-mail">
@@ -110,8 +111,42 @@
                 </div>
 
                 <div class="buttons">
-                    <button class="bt hollow" onclick="goPage('choose-plan')">Cadastre-se</button>
+                    <button class="bt hollow" onclick="openFormRegister(event)">Cadastre-se</button>
                     <button class="bt">Entrar</button>
+                </div>
+            </form>
+            
+            <!-- FORMULARIO DE REGISTRO -->
+            <form class="frm hidden" id="frm-register">
+                <div>
+                    <span class="ic">
+                        <img src="./assets/images/icons/ic-email.svg" alt="Icone de e-mail">
+                    </span>
+                    <input type="email" name="email-register" id="email-register" placeholder="Digite o seu e-mail">
+                </div>
+
+                <div>
+                    <span class="ic">
+                        <img src="./assets/images/icons/ic-senha.svg" alt="Icone de senha">
+                    </span>
+                    <input type="password" name="password" id="register-password" placeholder="Digite sua senha">
+                    <span class="ic" onclick="viewPassword('register-password')">
+                        <img src="./assets/images/icons/ic-olho.svg" alt="Icone de olho">
+                    </span>
+                </div>
+
+                <div>
+                    <span class="ic">
+                        <img src="./assets/images/icons/ic-senha.svg" alt="Icone de senha">
+                    </span>
+                    <input type="password" name="re-password" id="re-password" placeholder="Digite novamente sua senha">
+                    <span class="ic" onclick="viewPassword('re-password')">
+                        <img src="./assets/images/icons/ic-olho.svg" alt="Icone de olho">
+                    </span>
+                </div>
+
+                <div class="buttons">
+                    <button class="bt" onclick="goPage('choose-plan')">Cadastrar</button>
                 </div>
             </form>
         </section>
@@ -142,8 +177,8 @@
             
                             <!-- <img src="https://c.wallhere.com/photos/0e/e2/hoods_Anonymous_artwork_digital_4K-1910897.jpg!d" alt="Descrição da imagem"> -->
             
-                            <video autoplay muted loop poster="https://c.wallhere.com/photos/0e/e2/hoods_Anonymous_artwork_digital_4K-1910897.jpg!d">
-                                <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                            <video autoplay muted loop poster="./assets/images/all/banner-promo.png">
+                                <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                 Seu navegador não suporta o elemento de vídeo.
                             </video>
             
@@ -159,12 +194,10 @@
                         <section class="banner">
                             <div class="mask"></div>
             
-                            <img src="https://c.wallhere.com/photos/0e/e2/hoods_Anonymous_artwork_digital_4K-1910897.jpg!d" alt="Descrição da imagem">
-            
-                            <!-- <video autoplay muted loop poster="https://c.wallhere.com/photos/0e/e2/hoods_Anonymous_artwork_digital_4K-1910897.jpg!d">
-                                <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                            <video autoplay muted loop poster="./assets/images/all/banner-promo.png">
+                                <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                 Seu navegador não suporta o elemento de vídeo.
-                            </video> -->
+                            </video>
             
                             <header>
                                 <h1>Aqui iremos inserir um título</h1>
@@ -190,8 +223,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/lancamento-1.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -211,8 +244,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/lancamento-2.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -232,8 +265,28 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/lancamento-3.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
+                                        Seu navegador não suporta o elemento de vídeo.
+                                    </video>
+
+                                    <span class="ic-play-cover-image">
+                                        <img src="./assets/images/icons/ic-play-cover-image.png" alt="Ícone de Play">
+                                    </span>
+                                </div>
+                                <header>
+                                    <h1>Aqui iremos inserir um título</h1>
+                                    <p>Aqui iremos inserir um título</p>
+                                </header>
+                            </a>
+                        </section>
+                    </li>
+                    <li onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+                        <section>
+                            <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <video muted loop poster="./assets/images/all/lancamento-1.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -253,8 +306,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/lancamento-2.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -274,29 +327,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
-                                        Seu navegador não suporta o elemento de vídeo.
-                                    </video>
-
-                                    <span class="ic-play-cover-image">
-                                        <img src="./assets/images/icons/ic-play-cover-image.png" alt="Ícone de Play">
-                                    </span>
-                                </div>
-                                <header>
-                                    <h1>Aqui iremos inserir um título</h1>
-                                    <p>Aqui iremos inserir um título</p>
-                                </header>
-                            </a>
-                        </section>
-                    </li>
-
-                    <li onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
-                        <section>
-                            <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
-                                <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/lancamento-3.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -328,8 +360,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/melhores-do-mes-1.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -349,8 +381,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/melhores-do-mes-2.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -370,8 +402,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/melhores-do-mes-3.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -391,8 +423,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/melhores-do-mes-1.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -412,8 +444,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/melhores-do-mes-2.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -433,8 +465,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/melhores-do-mes-3.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -456,7 +488,7 @@
             <div class="space"></div>
 
             <!-- BACKGROUND -->
-            <div class="bg-model" style="background-image: url('https://c.wallhere.com/photos/f3/18/1366x768_px_Anonymous_Guy_Fawkes_Mask_snow-593733.jpg!d');"></div>        
+            <div class="bg-model" style="background-image: url('./assets/images/all/banner-promo.png');"></div>        
             
             <!-- SPACE -->
             <div class="space"></div>
@@ -465,9 +497,9 @@
             <section class="about">
                 <div class="images-grid">
                     <div class="grid">
-                        <img src="https://wallpapers.com/images/featured/anonymous-cw35qqcs9qzmva9i.jpg" alt="Descrição da imagem" id="img-grid-1">
-                        <img src="https://wallpapers.com/images/featured/anonymous-cw35qqcs9qzmva9i.jpg" alt="Descrição da imagem" id="img-grid-2">
-                        <img src="https://wallpapers.com/images/featured/anonymous-cw35qqcs9qzmva9i.jpg" alt="Descrição da imagem" id="img-grid-3">
+                        <img src="./assets/images/all/oque-sao-as-socias-1.png" alt="Descrição da imagem" id="img-grid-1">
+                        <img src="./assets/images/all/oque-sao-as-socias.png" alt="Descrição da imagem" id="img-grid-2">
+                        <img src="./assets/images/all/oque-sao-as-socias-2.png" alt="Descrição da imagem" id="img-grid-3">
                     </div>
                 </div>
 
@@ -497,8 +529,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/modelo-1.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -518,8 +550,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/modelo-2.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -539,8 +571,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/modelo-3.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -560,8 +592,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/modelo-4.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -581,8 +613,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/modelo-5.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -602,8 +634,8 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/modelo-6.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 
@@ -623,8 +655,50 @@
                         <section>
                             <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <video muted loop poster="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg">
-                                        <source src="./assets/movie/video-exemplo.mp4" type="video/mp4">
+                                    <video muted loop poster="./assets/images/all/modelo-7.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
+                                        Seu navegador não suporta o elemento de vídeo.
+                                    </video>
+
+                                    <span class="ic-play-cover-image">
+                                        <img src="./assets/images/icons/ic-play-cover-image.png" alt="Ícone de Play">
+                                    </span>
+                                </div>
+                                <header>
+                                    <h1>Aqui iremos inserir um título</h1>
+                                    <p>Aqui iremos inserir um título</p>
+                                </header>
+                            </a>
+                        </section>
+                    </li>
+
+                    <li onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+                        <section>
+                            <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <video muted loop poster="./assets/images/all/modelo-8.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
+                                        Seu navegador não suporta o elemento de vídeo.
+                                    </video>
+
+                                    <span class="ic-play-cover-image">
+                                        <img src="./assets/images/icons/ic-play-cover-image.png" alt="Ícone de Play">
+                                    </span>
+                                </div>
+                                <header>
+                                    <h1>Aqui iremos inserir um título</h1>
+                                    <p>Aqui iremos inserir um título</p>
+                                </header>
+                            </a>
+                        </section>
+                    </li>
+
+                    <li onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+                        <section>
+                            <a href="inner-page.html" title="AQUI VAI O TITULO DO VIDEO">
+                                <div class="cover-image">
+                                    <video muted loop poster="./assets/images/all/modelo-9.png">
+                                        <source src="https://www.bussinessgirls.com/topo/banner-barbearia.mp4" type="video/mp4">
                                         Seu navegador não suporta o elemento de vídeo.
                                     </video>
 

@@ -1042,6 +1042,10 @@ input {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
+.modal-access #frm-register .buttons {
+    grid-template-columns: 1fr;
+}
+
 
 @media (max-width: 932px) {
     /* SPACE */

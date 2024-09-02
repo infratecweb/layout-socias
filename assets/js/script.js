@@ -106,9 +106,7 @@ function mutedMovie (){
         movie.muted = true
         iconMuted.classList.add('hidden')
         iconSound.classList.remove('hidden')
-    }
-
-    
+    }  
 }
 
 // WATCH NOW
@@ -126,7 +124,8 @@ function whatchNow (){
 }
 
 // GO PAGE
-function goPage (page){
+function goPage (page, event = 'null'){
+    event.preventDefault()
     return window.location.href = `${page}.html`
 }
 
@@ -135,4 +134,15 @@ function viewPassword (id){
     const inputPassord = document.getElementById(`${id}`)
 
     inputPassord.type === 'password' ? inputPassord.type="text" : inputPassord.type="password"
+}
+
+// OPEN FORM REGISTER
+function openFormRegister (event){
+    event.preventDefault()
+    
+    const formLogin = document.getElementById('frm-login')
+    const formRegister = document.getElementById('frm-register')
+
+    formLogin.classList.add('hidden')
+    formRegister.classList.remove('hidden')
 }

@@ -86,6 +86,10 @@
     transition: all .4s ease-in-out;
 }
 
+.gallery .internal-page .cover-image > img {
+    object-position: top;
+}
+
 .gallery .cover-image .ic-play-cover-image {
     align-items: center;
     background-color: hsla(0, 0%, 0%, .2);

@@ -78,7 +78,8 @@
                 <button class="bt close" onclick="closeModal('modal-access')">X</button>
             </nav>
             
-            <form class="frm">
+            <!-- FORMULARIO DE LOGIN -->
+            <form class="frm" id="frm-login">
                 <div>
                     <span class="ic">
                         <img src="./assets/images/icons/ic-email.svg" alt="Icone de e-mail">
@@ -110,8 +111,42 @@
                 </div>
 
                 <div class="buttons">
-                    <button class="bt hollow" onclick="goPage('choose-plan')">Cadastre-se</button>
+                    <button class="bt hollow" onclick="openFormRegister(event)">Cadastre-se</button>
                     <button class="bt">Entrar</button>
+                </div>
+            </form>
+            
+            <!-- FORMULARIO DE REGISTRO -->
+            <form class="frm hidden" id="frm-register">
+                <div>
+                    <span class="ic">
+                        <img src="./assets/images/icons/ic-email.svg" alt="Icone de e-mail">
+                    </span>
+                    <input type="email" name="email-register" id="email-register" placeholder="Digite o seu e-mail">
+                </div>
+
+                <div>
+                    <span class="ic">
+                        <img src="./assets/images/icons/ic-senha.svg" alt="Icone de senha">
+                    </span>
+                    <input type="password" name="password" id="register-password" placeholder="Digite sua senha">
+                    <span class="ic" onclick="viewPassword('register-password')">
+                        <img src="./assets/images/icons/ic-olho.svg" alt="Icone de olho">
+                    </span>
+                </div>
+
+                <div>
+                    <span class="ic">
+                        <img src="./assets/images/icons/ic-senha.svg" alt="Icone de senha">
+                    </span>
+                    <input type="password" name="re-password" id="re-password" placeholder="Digite novamente sua senha">
+                    <span class="ic" onclick="viewPassword('re-password')">
+                        <img src="./assets/images/icons/ic-olho.svg" alt="Icone de olho">
+                    </span>
+                </div>
+
+                <div class="buttons">
+                    <button class="bt" onclick="goPage('choose-plan')">Cadastrar</button>
                 </div>
             </form>
         </section>
@@ -221,12 +256,12 @@
 
             <!-- GAL IMAGES -->
             <section class="gallery gal-images">
-                <ul class="gallery-content owl-carousel">
+                <ul class="gallery-content owl-carousel internal-page">
                     <li>
                         <section>
                             <a href="#" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                    <img src="./assets/images/all/modelo-1.png" alt="DESCRICAO DA IMAGEM">
                                 </div>
                             </a>
                         </section>
@@ -235,7 +270,7 @@
                         <section>
                             <a href="#" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                    <img src="./assets/images/all/modelo-2.png" alt="DESCRICAO DA IMAGEM">
                                 </div>
                             </a>
                         </section>
@@ -244,7 +279,7 @@
                         <section>
                             <a href="#" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                    <img src="./assets/images/all/modelo-3.png" alt="DESCRICAO DA IMAGEM">
                                 </div>
                             </a>
                         </section>
@@ -253,7 +288,7 @@
                         <section>
                             <a href="#" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                    <img src="./assets/images/all/modelo-4.png" alt="DESCRICAO DA IMAGEM">
                                 </div>
                             </a>
                         </section>
@@ -262,7 +297,7 @@
                         <section>
                             <a href="#" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                    <img src="./assets/images/all/modelo-5.png" alt="DESCRICAO DA IMAGEM">
                                 </div>
                             </a>
                         </section>
@@ -271,7 +306,7 @@
                         <section>
                             <a href="#" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                    <img src="./assets/images/all/modelo-6.png" alt="DESCRICAO DA IMAGEM">
                                 </div>
                             </a>
                         </section>
@@ -280,7 +315,7 @@
                         <section>
                             <a href="#" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                    <img src="./assets/images/all/modelo-7.png" alt="DESCRICAO DA IMAGEM">
                                 </div>
                             </a>
                         </section>
@@ -289,7 +324,7 @@
                         <section>
                             <a href="#" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                    <img src="./assets/images/all/modelo-1.png" alt="DESCRICAO DA IMAGEM">
                                 </div>
                             </a>
                         </section>
@@ -298,7 +333,7 @@
                         <section>
                             <a href="#" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                    <img src="./assets/images/all/modelo-1.png" alt="DESCRICAO DA IMAGEM">
                                 </div>
                             </a>
                         </section>
@@ -307,7 +342,7 @@
                         <section>
                             <a href="#" title="AQUI VAI O TITULO DO VIDEO">
                                 <div class="cover-image">
-                                    <img src="https://cryptoid.com.br/wp-content/uploads/2014/11/Anonymous.img1_.CrytoIDalterada.jpg" alt="DESCRICAO DA IMAGEM">
+                                    <img src="./assets/images/all/modelo-1.png" alt="DESCRICAO DA IMAGEM">
                                 </div>
                             </a>
                         </section>
