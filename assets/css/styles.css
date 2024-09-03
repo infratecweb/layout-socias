@@ -776,8 +776,8 @@ input {
 
 /* BG MODEL */
 .bg-model {
-    background-attachment: fixed;
-    background-position: top;
+    /* background-attachment: fixed; */
+    /* background-position: top; */
     background-size: cover;
     height: 100vh;
     max-height: 640px;
@@ -1162,7 +1162,7 @@ input {
 
     /* BG MODEL */
     .bg-model {
-        background-attachment: local;
+        /* background-attachment: local; */
         background-position: center;
         max-height: 400px;
     }
