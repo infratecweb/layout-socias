@@ -96,16 +96,14 @@ function mutedMovie (){
     const iconMuted = document.querySelector('.muted')
     const iconSound = document.querySelector('.sound')
 
-    console.log(movie.muted)
-
     if (movie.muted) {
         movie.muted = false
-        iconMuted.classList.remove('hidden')
-        iconSound.classList.add('hidden')
-    } else {
-        movie.muted = true
         iconMuted.classList.add('hidden')
         iconSound.classList.remove('hidden')
+    } else {
+        movie.muted = true
+        iconMuted.classList.remove('hidden')
+        iconSound.classList.add('hidden')
     }  
 }
 
