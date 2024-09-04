@@ -76,7 +76,7 @@ $(document).ready(function() {
         dots: false,
         nav: false,
         autoplay: true,
-        animateOut: 'fadeOut',
+        // animateOut: 'fadeOut',
         autoplayTimeout: 5000, // Muda de slide a cada 5 segundos
         autoplayHoverPause: true, // Pausa o autoplay ao passar o mouse
         onTranslated: videoPlay,
