@@ -75,12 +75,24 @@ $(document).ready(function() {
         loop: true,
         dots: false,
         nav: false,
+        autoWidth: true, 
+        responsiveClass:true,
         autoplay: true,
-        // animateOut: 'fadeOut',
+        animateOut: 'fadeOut',
         autoplayTimeout: 5000, // Muda de slide a cada 5 segundos
-        autoplayHoverPause: true, // Pausa o autoplay ao passar o mouse
         onTranslated: videoPlay,
-        onTranslate: videoStop
+        onTranslate: videoStop,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:1,
+            },
+            1000:{
+                items:1,
+            }
+        }
     });
 
     function videoPlay(event) {
