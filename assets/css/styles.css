@@ -1220,6 +1220,17 @@ input {
     
 }
 
+@media screen and (max-width: 540px) {
+    /* BG MODEL */
+    .bg-model {
+        /* background-attachment: local; */
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        max-height: 230px;
+    }
+}
+
 @media screen and (orientation: landscape) {
     /* TEMPLATE GRID */
     .template-grid main .container-banner {
