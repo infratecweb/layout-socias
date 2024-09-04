@@ -196,22 +196,22 @@ function openFormRegister (event){
 }
 
 // AUTOPLAY MOVIE
-window.onload = function (){
-    try {
-        const movie = document.getElementById('video-banner')
-        const movie2 = document.getElementById('video-banner-1')
-        const movie3 = document.getElementById('video-banner-2')
+// window.onload = function (){
+//     try {
+//         const movie = document.getElementById('video-banner')
+//         const movie2 = document.getElementById('video-banner-1')
+//         const movie3 = document.getElementById('video-banner-2')
 
-        movie.play().catch(function(error){
-            console.log('Autoplay foi impedido', error)
-        })
+//         movie.play().catch(function(error){
+//             console.log('Autoplay foi impedido', error)
+//         })
 
-        movie2.play().catch(function(error){
-            console.log('Autoplay foi impedido', error)
-        })
+//         movie2.play().catch(function(error){
+//             console.log('Autoplay foi impedido', error)
+//         })
 
-        movie3.play().catch(function(error){
-            console.log('Autoplay foi impedido', error)
-        })
-    } catch (error) {} 
-}
+//         movie3.play().catch(function(error){
+//             console.log('Autoplay foi impedido', error)
+//         })
+//     } catch (error) {} 
+// }
