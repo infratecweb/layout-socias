@@ -3,9 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("load", function() {
         // Quando a página carregar completamente
         var loading = document.getElementById("loading");
+        var content = document.getElementById("template-grid")
 
         // Esconde o elemento de carregamento
         loading.style.display = "none";
+
+        // Exibe o conteúdo da página
+        content.classList.remove('hidden');
 
         // Permite rolagem da página
         document.body.style.overflow = "auto";
