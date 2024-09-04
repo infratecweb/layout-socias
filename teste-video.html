@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <dl8-video id="teste" format="MONO_FLAT" display-mode="inline" autoPlay loop>
+        <source src="./assets/movie/banner-video-barbershop.mp4" type="video/mp4" />
+    </dl8-video>
+    
+
+    <script src="//cdn.delight-vr.com/latest/dl8-c9edf5f32e1f4152ad1811261269aea44a29fe65.js" async></script>
+    <script>
+        window.addEventListener('load', function (){
+            var element = document.querySelector("dl8-video") 
+            element.start()
+        })
+    </script>
+</body>
+</html>
