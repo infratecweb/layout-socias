@@ -49,15 +49,45 @@ $('.gallery-content').owlCarousel({
 })
 
 // GALLEY BANNER
-$('.galley-banner').owlCarousel({
-    dots: false,
-    nav: false,
-    items: 1,
-    animateOut: 'fadeOut',
-    loop:true,
-    autoplay:true,
-    autoplayTimeout:6000,
-})
+// $('.galley-banner').owlCarousel({
+//     dots: false,
+//     nav: false,
+//     items: 1,
+//     animateOut: 'fadeOut',
+//     loop:true,
+//     autoplay:true,
+//     autoplayTimeout:6000,
+// })
+
+$(document).ready(function() {
+    var owl = $('.galley-banner');
+
+    owl.owlCarousel({
+        items: 1, // Mostra um slide por vez
+        loop: true,
+        dots: false,
+        nav: false,
+        autoplay: true,
+        animateOut: 'fadeOut',
+        autoplayTimeout: 5000, // Muda de slide a cada 5 segundos
+        autoplayHoverPause: true, // Pausa o autoplay ao passar o mouse
+        onTranslated: videoPlay,
+        onTranslate: videoStop
+    });
+
+    function videoPlay(event) {
+        var currentItem = $(event.target).find('.owl-item.active video');
+        currentItem.get(0).play();
+    }
+
+    function videoStop(event) {
+        var videos = $(event.target).find('video');
+        videos.each(function() {
+            this.pause();
+            this.currentTime = 0; // Reinicia o vídeo
+        });
+    }
+});
 
 // FUNCTION SHOW/CLOSE MODAL
 function showModal (id){
