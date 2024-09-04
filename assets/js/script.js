@@ -1,3 +1,17 @@
+// LOADING SECTION
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("load", function() {
+        // Quando a página carregar completamente
+        var loading = document.getElementById("loading");
+
+        // Esconde o elemento de carregamento
+        loading.style.display = "none";
+
+        // Permite rolagem da página
+        document.body.style.overflow = "auto";
+    });
+});
+
 // FUNCTION TO RETURN THE CURRENT DATE
 function currentDate () {
      const date = new Date().getFullYear()
@@ -49,16 +63,6 @@ $('.gallery-content').owlCarousel({
 })
 
 // GALLEY BANNER
-// $('.galley-banner').owlCarousel({
-//     dots: false,
-//     nav: false,
-//     items: 1,
-//     animateOut: 'fadeOut',
-//     loop:true,
-//     autoplay:true,
-//     autoplayTimeout:6000,
-// })
-
 $(document).ready(function() {
     var owl = $('.galley-banner');
 

@@ -30,6 +30,31 @@ body {
      max-height: calc(100vh - 80px)!important;
 }
 
+/* LOADING */
+.loading {
+    background-color: var(--color-black);
+    display: grid;
+    height: 100vh;
+    max-height: 100%;
+    max-width: 100%;
+    position: fixed;
+    place-items: center;
+    width: 100vw;
+    z-index: 99;
+}
+
+.content-loading {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-loading img {
+    margin-bottom: 10px;
+    max-width: 130px;
+}
+
 /* BANNER CHOOSE */
 .banner-choose {
     height: 100vh;
