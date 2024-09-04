@@ -788,7 +788,7 @@ input {
 }
 
 .bg-model::after {
-    background-color: hsla(0,0%,0%,0.8);
+    background-color: hsla(0,0%,0%,0.3);
     content: "";
     height: 100vh;
     max-height: 100%;

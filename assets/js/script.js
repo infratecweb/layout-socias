@@ -144,3 +144,14 @@ function openFormRegister (event){
     formLogin.classList.add('hidden')
     formRegister.classList.remove('hidden')
 }
+
+// AUTOPLAY MOVIE
+window.onload = function (){
+    try {
+        const movie = document.getElementById('video-banner')
+
+        movie.play().catch(function(error){
+            console.log('Autoplay foi impedido', error)
+        })
+    } catch (error) {} 
+}
