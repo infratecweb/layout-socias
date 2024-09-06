@@ -885,6 +885,203 @@ input {
     margin-top: 20px;
 }
 
+/* MODAL - PAYMENT STATUS */
+.modal-payment-status {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+}
+
+.modal-payment-status .mask {
+    background-color: hsla(0,0%,0%,0.8);
+    height: 100vh;
+    left: 0;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+}
+
+.modal-payment-status section {
+    background-color: var(--color-black);
+    border-radius: 1rem;
+    max-height: 500px;
+    max-width: 640px;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+
+.modal-payment-status section nav {
+    align-items: center;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.modal-payment-status section nav img {
+    margin: 0 auto;
+    max-width: 80px;
+}
+
+.modal-payment-status section nav a {
+    color: #5D5D5D;
+    text-decoration: none;
+}
+
+/* .modal-payment-status section header {
+    overflow: scroll;
+    height: 100vh;
+    max-height: 170px;
+} */
+
+.modal-payment-status section header h1 {
+    --h1-font-size: 1.125rem;
+    --h1-line-height: 1.375rem;
+}
+
+.modal-payment-status section footer {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.modal-payment-status section footer button {
+    flex: 1;
+}
+
+[data-callBack="true"].card {
+    background-color: hsla(115, 71%, 11%, .6);
+}
+[data-callBack="true"].example-2::before {
+    background: linear-gradient(
+        90deg,
+        hsla(116, 85%, 59%, 0) 0%,
+        hsla(116, 85%, 59%, 1) 50%,
+        hsla(116, 85%, 59%, 0) 100%
+    );
+}
+[data-callBack="true"].example-2 .tick {
+    display: block;
+}
+[data-callBack="true"].example-2 .close {
+    display: none;
+}
+  
+[data-callBack="false"].card {
+    background-color: hsla(354, 53%, 15%, .6);
+}
+[data-callBack="false"].example-2::before {
+    background: linear-gradient(
+      90deg,
+      hsla(353, 86%, 54%, 0) 0%,
+      hsla(353, 86%, 54%, 1) 50%,
+      hsla(353, 86%, 54%, 0) 100%
+    );
+}
+[data-callBack="false"].example-2 .tick {
+    display: none;
+}
+[data-callBack="false"].example-2 .close {
+    display: block;
+}
+  
+.card {
+    background-color: rgba(102, 102, 102, .2);
+    height: 100vh;
+    max-height: 90px;
+    max-width: 90px;
+    width: 100vw;
+    border-radius: 100%;
+    padding: 4px;
+    margin-bottom: 30px;
+}
+  
+.card .inner {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100vw;
+    background: #161616;
+    color: #fff;
+    border-radius: 100%;
+    border: 5px solid var(--color-black);
+}
+  
+.example-2 {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.example-2 .inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+  
+.example-2 .inner svg {
+    fill: #565656;
+    width: 20px;
+}
+  
+.example-2::before {
+    content: "";
+    display: block;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(102, 102, 102, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    height: 100%;
+    width: 100%;
+    transform: translate(0);
+    position: absolute;
+    animation: rotate 5s linear forwards infinite;
+    z-index: 0;
+    top: 50%;
+    transform-origin: top center;
+}
+  
+@keyframes rotate {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+
+.content-payment-status {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.content-payment-status h1 {
+    font-size: 1.5rem;
+}
+
+.content-payment-status p {
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
 /* MODAL - ACCESS INFORMATION */
 .modal-access-info {
     align-items: center;
@@ -1234,6 +1431,10 @@ input {
     /* BOX */
     .box .content-plan > * {
         text-align: center;
+        width: 100%;
+    }
+
+    .box button {
         width: 100%;
     }
 

@@ -195,6 +195,41 @@ function openFormRegister (event){
     formRegister.classList.remove('hidden')
 }
 
+// OPEN PAYMENT STATUS TRUE
+function showStatusPayment (status){
+    try {
+        const modal = document.getElementById('modal-payment-status')
+        const elStatusTrue = document.getElementById('payment-status-true')
+        const elStatusFalse = document.getElementById('payment-status-false')
+
+        if (status) {
+            modal.classList.remove('hidden')
+            elStatusTrue.classList.remove('hidden')
+        } else {
+            modal.classList.remove('hidden')
+            elStatusFalse.classList.remove('hidden')
+        }
+    } catch (error) {}
+}
+
+function actionModalParams (){
+    const urlParams = new URLSearchParams(window.location.search);
+    const resutParamns = urlParams.get('showModal')
+
+    switch (resutParamns) {
+        case "paymentTrue":
+            showStatusPayment(true)
+            break;
+        case "paymentFalse":
+            showStatusPayment(false)
+            break;
+        default:
+            break;
+    }
+}
+
+actionModalParams ()
+
 // AUTOPLAY MOVIE
 // window.onload = function (){
 //     try {

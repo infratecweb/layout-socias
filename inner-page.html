@@ -160,6 +160,53 @@
         </section>
     </div>
 
+    <!-- MODAL - PAYMENT STATUS -->
+    <div class="modal-payment-status hidden" id="modal-payment-status">
+        <div class="mask"></div>
+
+        <section>
+            <nav>
+                <img src="./assets/images/logo-as-socias.png" alt="Logo As Sócias">
+
+                <button class="bt close" onclick="closeModal('modal-payment-status')">X</button>
+            </nav>
+            
+            <!-- STATUS INFO TRUE -->
+            <section class="content-payment-status hidden" id="payment-status-true">
+                <div data-callBack="true" class="card example-2">
+                    <div class="inner">
+                     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" class="tick"><path d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"/></svg>
+                     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" class="close"><path d="M 4.9902344 3.9902344 A 1.0001 1.0001 0 0 0 4.2929688 5.7070312 L 10.585938 12 L 4.2929688 18.292969 A 1.0001 1.0001 0 1 0 5.7070312 19.707031 L 12 13.414062 L 18.292969 19.707031 A 1.0001 1.0001 0 1 0 19.707031 18.292969 L 13.414062 12 L 19.707031 5.7070312 A 1.0001 1.0001 0 0 0 18.980469 3.9902344 A 1.0001 1.0001 0 0 0 18.292969 4.2929688 L 12 10.585938 L 5.7070312 4.2929688 A 1.0001 1.0001 0 0 0 4.9902344 3.9902344 z"/></svg>
+                    </div>
+                </div>
+
+                <header>
+                    <h1>Compra feita com sucesso!</h1>
+                    <p>Sua comunidade estará acessível ao público em até 48 horas</p>
+                </header>
+            </section>
+
+            <!-- STATUS INFO FALSE -->
+            <section class="content-payment-status hidden" id="payment-status-false">
+                <div data-callBack="false" class="card example-2">
+                    <div class="inner">
+                     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" class="tick"><path d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"/></svg>
+                     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" class="close"><path d="M 4.9902344 3.9902344 A 1.0001 1.0001 0 0 0 4.2929688 5.7070312 L 10.585938 12 L 4.2929688 18.292969 A 1.0001 1.0001 0 1 0 5.7070312 19.707031 L 12 13.414062 L 18.292969 19.707031 A 1.0001 1.0001 0 1 0 19.707031 18.292969 L 13.414062 12 L 19.707031 5.7070312 A 1.0001 1.0001 0 0 0 18.980469 3.9902344 A 1.0001 1.0001 0 0 0 18.292969 4.2929688 L 12 10.585938 L 5.7070312 4.2929688 A 1.0001 1.0001 0 0 0 4.9902344 3.9902344 z"/></svg>
+                    </div>
+                </div>
+
+                <header>
+                    <h1>Cartão recusado</h1>
+                    <p>Fale com a operadora para saber o que aconteceu</p>
+                </header>
+            </section>
+
+             <footer>
+                <button class="bt" onclick="closeModal('modal-payment-status')">Continuar</button>
+             </footer>
+        </section>
+    </div>
+
     <!-- TEMPLATE -->
     <div class="template-grid hidden" id="template-grid">
         <!-- HEADER -->
