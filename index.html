@@ -564,7 +564,15 @@
             <div class="space"></div>
 
             <!-- BACKGROUND -->
-            <div class="bg-model" style="background-image: url('./assets/images/all/banner-promo.png');"></div>        
+            <div class="bg-model">
+                <picture>
+                    <!-- Imagem para smartphones (ou dispositivos menores) -->
+                    <source media="(max-width: 767px)" srcset="./assets/images/all/banner-promo-mobile.jpeg">
+                
+                    <!-- Imagem padrão (fallback) caso as media queries não sejam atendidas -->
+                    <img src="./assets/images/all/banner-promo.png" alt="Imagem adaptada para o dispositivo">
+                </picture>
+            </div>        
             
             <!-- SPACE -->
             <div class="space"></div>
