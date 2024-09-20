@@ -68,8 +68,28 @@
     border: none;
 }
 
+.bt.menu-hamburguer {
+    --bt-background-color: transparent;
+    font-size: 1.5rem;
+    border: none;
+    display: none;
+}
+
+.bt.menu-hamburguer svg {
+    width: 20px;
+}
+
+.bt.menu-hamburguer path {
+    fill: var(--color-grey-clear);
+}
+
 @media screen and (max-width: 932px) {
     .bt {
         --bt-padding: .7rem 1rem;
+    }
+}
+@media screen and (max-width: 540px) {
+    .bt.menu-hamburguer {
+        display: block;
     }
 }
