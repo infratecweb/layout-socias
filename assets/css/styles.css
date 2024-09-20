@@ -40,7 +40,7 @@ body {
     position: fixed;
     place-items: center;
     width: 100vw;
-    z-index: 99;
+    z-index: 999999;
 }
 
 .content-loading {
@@ -1445,6 +1445,39 @@ select option {
     border-radius: .5rem;
 }
 
+/* MENU MOBILE */
+.menu-mobile {
+    background-color: var(--color-black);
+    height: 100vh;
+    max-height: 100%;
+    max-width: 400px;
+    width: 100vw;
+    padding: 1.2rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
+
+.menu-mobile header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-mobile header h1 {
+    font-size: 1.4rem;
+}
+
+.list-menu-mobile {
+    margin-top: 1rem;
+}
+.list-menu-mobile li {
+    margin: 1rem 0;
+}
+.list-menu-mobile li button {
+    width: 100%;
+}
+
 @media (max-width: 932px) {
     /* SPACE */
     .space {
@@ -1628,6 +1661,11 @@ select option {
 }
 
 @media screen and (max-width: 540px) {
+    /* MENU MOBILE */
+    .menu-mobile {
+        max-width: 100%;
+    }
+
     /* BG MODEL */
     .bg-model {
         /* background-attachment: local; */

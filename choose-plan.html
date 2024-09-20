@@ -207,6 +207,37 @@
         </section>
     </div>
 
+    <!-- MENU MOBILE -->
+    <section class="menu-mobile hidden" id="menu-mobile">
+        <header>
+            <h1>Menu</h1>
+            <button class="bt close" onclick="closeModal('menu-mobile')">X</button>
+        </header>
+
+        <ul class="list-menu-mobile">
+            <li>
+                <div class="select">
+                    <span class="select__flag" aria-hidden="true"></span>
+                    <select class="select__input" name="country-selector" id="country-selector">
+                        <option value="BR" selected>BR</option>
+                        <option value="EN">EN</option>
+                        <option value="PT">PT</option>
+                        <option value="IT">IT</option>
+                        <option value="ES">ES</option>
+                    </select>
+                        
+                    <svg class="select__arrow" aria-hidden="true" viewBox="0 0 16 16"><polyline points="3.5,6.5 8,11 12.5,6.5" stroke-width="2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
+                </div>
+            </li>
+            <li>
+                <button class="bt">Join now</button>
+            </li>
+            <li>
+                <button class="bt hollow">Member area</button>
+            </li>
+        </ul>
+    </section>
+
     <!-- TEMPLATE -->
     <div class="template-grid hidden" id="template-grid">
         <!-- HEADER -->
@@ -220,7 +251,7 @@
 
                 <div class="new-group-buttons">
                     <button class="bt clear" onclick="showModal('modal-access-info')">JOIN NOW</button>
-                    <button class="bt menu-hamburguer">
+                    <button class="bt menu-hamburguer" onclick="showModal('menu-mobile')">
                         <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
                             <path d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"/>
                         </svg>
