@@ -61,6 +61,13 @@
     width: 20px;
 }
 
+.bt.clear {
+    --bt-background-color: transparent;
+    --bt-color: #FFFFFF;
+    font-size: 1.5rem;
+    border: none;
+}
+
 @media screen and (max-width: 932px) {
     .bt {
         --bt-padding: .7rem 1rem;

@@ -8,4 +8,8 @@
     --color-black: hsla(210, 40%, 2%, 1);
     --color-yellow: hsla(47, 100%, 69%, 1);
     --color-border: hsla(210, 11%, 7%, 1);
+
+    --select-icon-size: 16px;
+    --select-icon-margin: 1rem;
+    --select-text-icon-gap: 0.5rem;
 }
