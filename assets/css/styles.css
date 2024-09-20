@@ -637,11 +637,24 @@ input {
 
 .template-grid > header {
     align-items: center;
-    display: flex;
+    background-color: var(--color-black);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
     grid-area: header;
+    grid-column: 1/-1;
+    justify-content: space-between;
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.header-center {
+    align-items: center;
+    display: flex;
     grid-column: 2/8;
     justify-content: space-between;
-    padding: 1rem 0;
+    width: 100%;
 }
 
 .template-grid > header .logo img {
