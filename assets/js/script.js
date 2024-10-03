@@ -230,23 +230,7 @@ function actionModalParams (){
 
 actionModalParams ()
 
-// AUTOPLAY MOVIE
-// window.onload = function (){
-//     try {
-//         const movie = document.getElementById('video-banner')
-//         const movie2 = document.getElementById('video-banner-1')
-//         const movie3 = document.getElementById('video-banner-2')
+const player = new Plyr('video', {captions: {active: true}});
 
-//         movie.play().catch(function(error){
-//             console.log('Autoplay foi impedido', error)
-//         })
-
-//         movie2.play().catch(function(error){
-//             console.log('Autoplay foi impedido', error)
-//         })
-
-//         movie3.play().catch(function(error){
-//             console.log('Autoplay foi impedido', error)
-//         })
-//     } catch (error) {} 
-// }
+// Expose player so it can be used from the console
+window.player = player;
