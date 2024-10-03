@@ -1510,7 +1510,7 @@ select option {
     /* INNER BANNER */
     .controls-banner {
         grid-column: 1/-1;
-        padding: 0 1rem;
+        /* padding: 0 1rem; */
     }
 
     /* MOVIE INFOS */
